@@ -7,5 +7,24 @@ body {
 }
 
 .feature-grid {
-  grid-template-columns: repeat(2, 1fr );
+  align-self: start;
+  grid-template-columns: repeat(4, 1fr );
+  grid-template-rows: repeat(6, 1fr );
+}
+
+.feature-grid :nth-child(1),
+.feature-grid :nth-child(4),
+.feature-grid :nth-child(5),
+.feature-grid :nth-child(7) {
+  grid-row: span 3;
+}
+
+.feature-grid :nth-child(2),
+.feature-grid :nth-child(3) {
+  grid-row: span 2;
+}
+
+.feature-grid :nth-child(6) {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 4;
 }
